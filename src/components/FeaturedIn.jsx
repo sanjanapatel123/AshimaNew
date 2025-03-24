@@ -74,13 +74,13 @@ const FeaturedInSection = () => {
             FEATURED IN
           </h2>
           <p className="text-base sm:text-lg text-gray-300 font-Roboto Condensed">
-            ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS<br></br> FROM
+            ENHANCE YOUR LEARNING WITH INSTjustify-centeANT DIGITAL PRODUCTS<br></br> FROM
             INSTANT REAL-WORLD PROJECTS TO PROMPTS.
           </p>
         </div>
 
         {/* Right Section - Logos */}
-        <div className="flex justify-center">
+        <div className="flex">
           <img
             src={featureicon}
             alt="Featured In"
