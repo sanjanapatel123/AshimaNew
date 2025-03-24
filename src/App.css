@@ -35,7 +35,15 @@ body {
 .animate-scroll-right {
   animation: scroll-right 25s linear infinite;
 }
-.box{
-  border-left:35px solid black ;
-  border-right:35px solid black ;
-}
+/* .box {
+  border-left: 35px solid black;
+  border-right: 35px solid black;
+} */
+
+/* Hide the borders on screens smaller than 1024px */
+/* @media (max-width: 1024px) {
+  .box {
+    border-left: none !important;
+    border-right: none !important;
+  }
+} */

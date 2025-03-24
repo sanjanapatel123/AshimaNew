@@ -254,71 +254,7 @@ const products = [
 const DigitalProducts = () => {
   return (
     <div className="bg-white text-black py-16 px-6 sm:px-8 mt-5 ">
-      {/* Heading Section */}
-      {/* <h2
-        className="text-center text-[55px] sm:text-5xl font-impact
- uppercase mb-4 tracking-[0.5%] leading-[65px]"
-      >
-        DIGITAL <span className="text-[#008578]">PRODUCTS</span>
-      </h2>
-    
-      <p className="text-center text-[16px] text-[#1E1E1E]   font-Roboto Condensed tracking-[0.5%]">
-        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
-        FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
-      </p> */}
-      {/* <h2
-        className="text-center text-[55px] sm:text-5xl font-impact
-  uppercase mb-4 tracking-[0.5%] leading-[65px]"
-      >
-        DIGITAL <span className="text-[#008578]">PRODUCTS</span>
-      </h2>
-
-      <p className="text-center text-[16px] text-[#1E1E1E] font-Roboto Condensed tracking-[0.5%]">
-        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
-        FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
-      </p> */}
-      {/* <div className="mx-auto text-center max-w-[600px]">
-       
-        <h2 className="text-[55px] sm:text-5xl font-impact uppercase mb-4 tracking-[0.5%] leading-[65px]">
-          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
-        </h2>
-
-        <p className="text-[16px] text-[#1E1E1E] font-Roboto Condensed leading-[25px]">
-          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
-          FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
-        </p>
-      </div> */}
-
-      {/* <div className="w-[411px] h-[131px] mx-auto flex flex-col items-center justify-center gap-4">
-        <h2 className="text-[55px] font-impact uppercase tracking-[0.5%] leading-[65px] text-center">
-          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
-        </h2>
-
-        <p className="text-[16px] text-[#1E1E1E] font-Roboto Condensed leading-[25px] text-center">
-          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
-          FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
-        </p>
-      </div> */}
-      {/* <div
-        className="w-[411px] h-[131px] mx-auto text-center"
-        style={{
-          lineHeight: "normal", // Keeps height tight
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "8px", // Smaller gap between h2 and p
-        }}
-      >
-        <h2 className="text-[55px] sm:text-5xl font-impact uppercase mb-0 tracking-[0.5%] leading-[65px]">
-          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
-        </h2>
-
-        <p className="text-[16px] text-[#1E1E1E] font-Roboto Condensed leading-[25px]">
-          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
-          FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
-        </p>
-      </div> */}
+ 
       <div
         className="w-[411px] h-[131px] mx-auto text-center"
         style={{

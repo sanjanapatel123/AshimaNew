@@ -444,6 +444,7 @@ import Explore from "./components/Explore";
 import AllCourses from "./components/AllCourses";
 import Login from "./components/Login";
 import "./App.css";
+import MarketProduct from "./components/MarketProduct"
 
 function App() {
   const location = useLocation();
@@ -462,7 +463,8 @@ function App() {
             path="/"
             element={
               <div>
-                <Hero />
+                <MarketProduct/>
+                {/* <Hero />
                 <Explore />
                 <CompaniesSection />
                 <Trending />
@@ -474,7 +476,8 @@ function App() {
                 <FAQSection />
                 <ReviewCards />
                 <StartLearning />
-                <Footer />
+                <Footer /> */}
+
               </div>
             }
           />
