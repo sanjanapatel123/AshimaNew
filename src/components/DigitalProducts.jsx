@@ -35,7 +35,7 @@
 //           Enhance your learning with instant digital products from instant
 //           real-world projects to prompts.
 //         </p>
-//       </div>    
+//       </div>
 
 //       {/* Second Row - Same as Above */}
 //       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-20">
@@ -72,18 +72,11 @@
 
 // export default DigitalProducts;
 
-
-
-
-
-
-
 // import React from "react";
 // import product1 from "../assets/product1.png"
 // import product2 from "../assets/product2.png";
 // import product3 from "../assets/product3.png";
 // import product4 from "../assets/product4.png";
-
 
 // const products = [
 //   {
@@ -149,9 +142,6 @@
 // };
 
 // export default DigitalProducts;
-
-
-
 
 // import React from "react";
 // import product1 from "../assets/product1.png";
@@ -224,9 +214,6 @@
 
 // export default DigitalProducts;
 
-
-
-
 import React from "react";
 import product1 from "../assets/product1.png";
 import product2 from "../assets/product2.png";
@@ -266,28 +253,105 @@ const products = [
 
 const DigitalProducts = () => {
   return (
-    <div className="bg-white text-black py-16 px-6 sm:px-8">
+    <div className="bg-white text-black py-16 px-6 sm:px-8 mt-5 ">
       {/* Heading Section */}
-      <h2 className="text-center text-3xl sm:text-5xl font-extrabold uppercase mb-4">
+      {/* <h2
+        className="text-center text-[55px] sm:text-5xl font-impact
+ uppercase mb-4 tracking-[0.5%] leading-[65px]"
+      >
         DIGITAL <span className="text-[#008578]">PRODUCTS</span>
       </h2>
-      <p className="text-center text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
-        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
-        REAL-WORLD PROJECTS TO PROMPTS.
-      </p>
+    
+      <p className="text-center text-[16px] text-[#1E1E1E]   font-Roboto Condensed tracking-[0.5%]">
+        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
+        FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
+      </p> */}
+      {/* <h2
+        className="text-center text-[55px] sm:text-5xl font-impact
+  uppercase mb-4 tracking-[0.5%] leading-[65px]"
+      >
+        DIGITAL <span className="text-[#008578]">PRODUCTS</span>
+      </h2>
+
+      <p className="text-center text-[16px] text-[#1E1E1E] font-Roboto Condensed tracking-[0.5%]">
+        ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
+        FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
+      </p> */}
+      {/* <div className="mx-auto text-center max-w-[600px]">
+       
+        <h2 className="text-[55px] sm:text-5xl font-impact uppercase mb-4 tracking-[0.5%] leading-[65px]">
+          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
+        </h2>
+
+        <p className="text-[16px] text-[#1E1E1E] font-Roboto Condensed leading-[25px]">
+          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
+          FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
+        </p>
+      </div> */}
+
+      {/* <div className="w-[411px] h-[131px] mx-auto flex flex-col items-center justify-center gap-4">
+        <h2 className="text-[55px] font-impact uppercase tracking-[0.5%] leading-[65px] text-center">
+          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
+        </h2>
+
+        <p className="text-[16px] text-[#1E1E1E] font-Roboto Condensed leading-[25px] text-center">
+          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
+          FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
+        </p>
+      </div> */}
+      {/* <div
+        className="w-[411px] h-[131px] mx-auto text-center"
+        style={{
+          lineHeight: "normal", // Keeps height tight
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "8px", // Smaller gap between h2 and p
+        }}
+      >
+        <h2 className="text-[55px] sm:text-5xl font-impact uppercase mb-0 tracking-[0.5%] leading-[65px]">
+          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
+        </h2>
+
+        <p className="text-[16px] text-[#1E1E1E] font-Roboto Condensed leading-[25px]">
+          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS <br />
+          FROM INSTANT REAL-WORLD PROJECTS TO PROMPTS.
+        </p>
+      </div> */}
+      <div
+        className="w-[411px] h-[131px] mx-auto text-center"
+        style={{
+          lineHeight: "normal",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "8px",
+        }}
+      >
+        <h2 className="text-[55px] sm:text-5xl font-impact uppercase mb-0 tracking-[0.5%] leading-[65px]">
+          DIGITAL <span className="text-[#008578]">PRODUCTS</span>
+        </h2>
+
+        <p className=" text-[#1E1E1E] font-Roboto Condensed leading-[25px]">
+          ENHANCE YOUR LEARNING WITH INSTANT DIGITAL PRODUCTS FROM INSTANT
+          REAL-WORLD PROJECTS TO PROMPTS.
+        </p>
+      </div>
 
       {/* Product Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  place-items-center">
         {products.map((product) => (
           <div
             key={product.id}
-            className="relative bg-white shadow-lg rounded-lg overflow-hidden w-full flex flex-col items-center"
+            className="relative bg-transparent  rounded-lg overflow-hidden flex flex-col items-center w-[350px] h-[440px] mx-auto"
           >
             {/* Product Image */}
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-[400px] sm:h-[600px] object-contain"
+              className="w-full h-full object-contain p-2"
             />
           </div>
         ))}
