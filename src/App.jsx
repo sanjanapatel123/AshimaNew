@@ -1,24 +1,36 @@
-import { Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import AllCourses from "./components/AllCourses";
-import Login from "./components/Login";
-import "./App.css";
-import Home from "./components/Home";
+// import React from "react";
+// import Navbar from "./components/Navbar";
+// import HeroSection from "./components/HeroSection";
+// import HowToUse from "./components/HowToUse";
+// import Dashboard from "./components/Dashboard";
 
-function App() {
-  const location = useLocation();
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <Navbar></Navbar>
+//       <HeroSection></HeroSection>
+//       <HowToUse></HowToUse> */}
+//       {/* <Dashboard></Dashboard> */}
+//     </div>
+//   );
+// };
 
+// export default App;
+
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import ChatBox from "./components/ChatBox";
+
+const App = () => {
   return (
-    <div className="box">
-      <div className="">
-        <Routes>
-          <Route path="/" element={<Home></Home>} />
-          <Route path="/AllCourses" element={<AllCourses />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </div>
+    <div
+      className="flex min-h-screen"
+      style={{ background: "linear-gradient(90deg, #0A071B 0%, #241B4A 100%)" }}
+    >
+      <Sidebar />
+      <ChatBox />
     </div>
   );
-}
+};
 
 export default App;
