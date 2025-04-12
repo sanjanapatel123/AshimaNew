@@ -178,7 +178,7 @@ const cards = [
 const Explore = () => {
   return (
     <div
-      className="relative overflow-hidden bg-white py-4 md:py-8 rounded-xl w-full"
+      className="relative overflow-hidden bg-white py-4 md:py-8 w-full"
       style={{ height: "330px" }}
     >
       <motion.div

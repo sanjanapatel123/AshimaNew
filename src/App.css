@@ -5,22 +5,14 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-html,
-body {
-  overflow-x: hidden;
-  /* background-color: black; */
-}
 
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
-  
 }
 .scrollbar-hidden {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-
 
 @keyframes scroll-right {
   from {
@@ -35,15 +27,7 @@ body {
 .animate-scroll-right {
   animation: scroll-right 25s linear infinite;
 }
-/* .box {
+.box {
   border-left: 35px solid black;
   border-right: 35px solid black;
-} */
-
-/* Hide the borders on screens smaller than 1024px */
-/* @media (max-width: 1024px) {
-  .box {
-    border-left: none !important;
-    border-right: none !important;
-  }
-} */
+}

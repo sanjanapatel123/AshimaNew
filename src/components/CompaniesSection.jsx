@@ -33,7 +33,7 @@ const CompaniesSection = () => {
         </div>
 
         {/* Right Scrolling Logos (Left ➡️ Right) */}
-        <div className="w-full md:w-2/3 overflow-hidden relative">
+        <div className="w-full md:w-2/4 overflow-hidden relative">
           <motion.div
             className="flex w-max gap-6"
             animate={{ x: ["-50%", "0%"] }} // 👈 scroll left to right
@@ -46,7 +46,7 @@ const CompaniesSection = () => {
             {[...companies, ...companies].map((logo, index) => (
               <div
                 key={index}
-                className="bg-white shadow-md rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]"
+                className="bg-white rounded-lg p-3 flex items-center justify-center w-[90px] h-[70px]"
               >
                 <img
                   src={logo}

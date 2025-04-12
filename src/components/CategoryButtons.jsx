@@ -36,7 +36,6 @@ const courses = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
   },
- 
 ];
 
 const RideTheAIWave = () => {
@@ -61,7 +60,7 @@ const RideTheAIWave = () => {
   };
 
   return (
-    <div className="bg-black text-white py-10 px-4 sm:px-6">
+    <div className="bg-black text-white py-10">
       {/* Heading */}
       <h2 className="text-center text-[45px] sm:text-5xl font-impact uppercase mb-10">
         RIDE THE AI WAVE WITH US
@@ -69,12 +68,17 @@ const RideTheAIWave = () => {
 
       {/* Cards + Arrows wrapper */}
 
-      <div className="w-full flex justify-center">
-        <div className="grid grid-cols-4 gap-6">
-          {courses.slice(0, 4).map((course, index) => (
+      {/* Scrollable Cards Section */}
+      <div className="relative overflow-hidden w-full">
+        <div
+          ref={scrollRef}
+          className="flex gap-4 overflow-x-auto pb-2 scroll-smooth scrollbar-hide"
+          // className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto scroll-smooth scrollbar-hide"
+        >
+          {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-white text-black w-[320px] h-[455px] rounded-[4px] shadow-lg p-6 sm:w-[340px] sm:min-w-[340px] flex-shrink-0"
+              className="bg-white text-black w-[320px] h-[455px] rounded-[4px] shadow-lg p-6 flex-shrink-0"
             >
               <h3 className="mb-4 font-impact text-[24px] uppercase">
                 {course.title}
@@ -82,12 +86,12 @@ const RideTheAIWave = () => {
               <img
                 src={course.image}
                 alt={course.title}
-                className="w-[280px] h-[208px] object-cover rounded-[4px] mb-4"
+                className="w-full h-[208px] object-cover rounded-[4px] mb-4"
               />
               <p className="text-[16px] font-Roboto Condensed text-[#1E1E1E] uppercase mb-4 line-clamp-3">
                 {course.description}
               </p>
-              <button className="w-full sm:w-44 py-2 bg-black text-white font-bold rounded-xl hover:bg-gray-900 transition">
+              <button className="w-full py-2 bg-black text-white font-bold rounded-xl hover:bg-gray-900 transition">
                 EXPLORE COURSES
               </button>
             </div>
@@ -96,10 +100,9 @@ const RideTheAIWave = () => {
       </div>
 
       {/* Navigation Dots */}
-
-      <div className="flex items-center justify-between w-full max-w-[1380px] mx-auto mt-10 px-4">
-        {/* Left Arrow shifted slightly left */}
-        <div className="ml-[-20px]">
+      {/* Navigation Dots & Arrows */}
+      <div className="flex items-center justify-between w-full max-w-[1380px] mx-auto mt-10">
+        <div className="">
           <button
             onClick={scrollLeft}
             className="bg-[#00E0C6] text-black p-2 rounded-full hover:bg-[#00c5b0] transition"
@@ -108,7 +111,6 @@ const RideTheAIWave = () => {
           </button>
         </div>
 
-        {/* Dots */}
         <div className="flex justify-center space-x-2">
           {[...Array(4)].map((_, i) => (
             <div
@@ -120,8 +122,7 @@ const RideTheAIWave = () => {
           ))}
         </div>
 
-        {/* Right Arrow shifted slightly right */}
-        <div className="mr-[-25px]">
+        <div className="">
           <button
             onClick={scrollRight}
             className="bg-[#00E0C6] text-black p-2 rounded-full hover:bg-[#00c5b0] transition"
@@ -135,7 +136,3 @@ const RideTheAIWave = () => {
 };
 
 export default RideTheAIWave;
-
-
-
-
