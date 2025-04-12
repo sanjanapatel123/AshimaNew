@@ -4,15 +4,17 @@ import HeroSection from "./components/HeroSection";
 import HowToUse from "./components/HowToUse";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
+import HomePage from "./components/HomePage";
 
 const App = () => {
   return (
     <div>
-      {/* <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <HowToUse></HowToUse> */}
+      <Navbar></Navbar>
+      <HomePage></HomePage>
+      {/* <HeroSection></HeroSection> */}
+      {/* <HowToUse></HowToUse> */}
       {/* <Dashboard></Dashboard> */}
-      <Home></Home>
+      {/* <Home></Home> */}
     </div>
   );
 };
