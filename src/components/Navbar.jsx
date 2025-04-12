@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import LoginModal from "./LoginModal";
 
 const Navbar = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <nav className="bg-[#0A071B] py-3">
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -24,10 +26,15 @@ const Navbar = () => {
         </div>
 
         {/* Login Button */}
-        <button className="border border-[#D4FF00] text-white text-sm px-4 py-1 rounded-full hover:bg-[#D4FF00] hover:text-black transition">
+        <button
+          onClick={() => setOpenModal(true)}
+          className="border border-[#D4FF00] text-white text-sm px-4 py-1 rounded-full hover:bg-[#D4FF00] hover:text-black transition"
+        >
           Login Now
         </button>
       </div>
+
+      {openModal && <LoginModal closeModal={() => setOpenModal(false)} />}
     </nav>
   );
 };

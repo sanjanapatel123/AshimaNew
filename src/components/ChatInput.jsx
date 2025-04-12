@@ -1,25 +1,16 @@
 import React, { useState } from "react";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaPaperclip, FaPaperPlane } from "react-icons/fa";
 
-const ChatInput = ({ sendMessage }) => {
+const ChatInput = () => {
   const [msg, setMsg] = useState("");
 
-  const handleSend = () => {
-    if (!msg.trim()) return;
-    sendMessage(msg);
-    setMsg("");
-  };
-
   return (
-    <div className="flex gap-3 border border-purple-600 px-4 py-3 rounded-full mt-5">
-      <input
-        type="text"
-        value={msg}
-        onChange={(e) => setMsg(e.target.value)}
-        placeholder="Write Prompt Here..."
-        className="flex-1 bg-transparent text-sm text-gray-300 outline-none"
-      />
-      <button onClick={handleSend} className="bg-[#D4FF00] text-black p-2 rounded-full">
+    <div className="flex justify-between items-center w-full max-w-2xl border border-purple-600 px-4 py-3 rounded-full mt-10">
+      <div className="flex items-center gap-3 text-sm text-gray-300">
+        <FaPaperclip className="text-[#D4FF00]" />
+        Write Prompt Here.
+      </div>
+      <button className="bg-[#D4FF00] text-black p-2 rounded-full">
         <FaPaperPlane />
       </button>
     </div>
