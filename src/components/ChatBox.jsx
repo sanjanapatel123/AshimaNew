@@ -1,33 +1,38 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
+import { FiLogOut, FiEdit3 } from "react-icons/fi";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ChatInput from "./ChatInput";
-import Message from "./Message";
 
-const ChatBox = () => {
-  const [messages, setMessages] = useState([]);
-  const chatRef = useRef();
-
-  useEffect(() => {
-    chatRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
-  const sendMessage = (msg) => {
-    setMessages([...messages, { type: "user", text: msg }]);
-
-    setTimeout(() => {
-      setMessages((prev) => [...prev, { type: "bot", text: "This is a dummy AI response for your query." }]);
-    }, 1000);
-  };
-
+const ChatBox = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
-    <div className="flex-1 flex flex-col justify-between p-6 text-white">
-      <div className="flex-1 overflow-y-auto space-y-4">
-        {messages.map((m, idx) => (
-          <Message key={idx} type={m.type} text={m.text} />
-        ))}
-        <div ref={chatRef}></div>
+    <div className="flex-1 flex flex-col justify-between items-center px-6 py-10 text-white relative transition-all duration-500">
+
+      {/* Top Buttons */}
+      <div className="flex justify-between w-full px-4">
+        <div className="flex items-center gap-3 text-2xl">
+          {/* <button
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            className="bg-[#D4FF00] text-black p-1 rounded-full"
+          >
+            {isSidebarOpen ? <IoIosArrowBack /> : <IoIosArrowForward />}
+          </button>
+          <FiEdit3 /> */}
+        </div>
+        <button className="bg-purple-600 px-3 py-1 rounded-full text-sm">Upgrade Plan</button>
       </div>
 
-      <ChatInput sendMessage={sendMessage} />
+      {/* Welcome Text */}
+      <div className="text-center">
+        <h1 className="text-[#D4FF00] text-xl md:text-2xl font-extrabold mb-2">USER NAME,</h1>
+        <h2 className="text-2xl md:text-3xl font-extrabold mb-4">WELCOME TO CI GPT</h2>
+        <p className="max-w-xl mx-auto text-gray-300 text-sm md:text-base leading-relaxed">
+          Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+          Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s,
+        </p>
+      </div>
+
+      {/* Input */}
+      <ChatInput />
     </div>
   );
 };

@@ -3,18 +3,30 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import HowToUse from "./components/HowToUse";
 import Dashboard from "./components/Dashboard";
+<<<<<<< HEAD
 import Testimonial from "./components/Tesimonial";
 import Footer from "./components/Footer";
+=======
+import Home from "./components/Home";
+>>>>>>> d512d63e53353b9ade9bd06bf913e7989f2de253
 
 const App = () => {
   return (
     <div>
+<<<<<<< HEAD
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <HowToUse></HowToUse> 
       <Testimonial></Testimonial>
       <Footer></Footer>
        {/* <Dashboard></Dashboard> */}
+=======
+      {/* <Navbar></Navbar>
+      <HeroSection></HeroSection>
+      <HowToUse></HowToUse> */}
+      {/* <Dashboard></Dashboard> */}
+      <Home></Home>
+>>>>>>> d512d63e53353b9ade9bd06bf913e7989f2de253
     </div>
   );
 };
