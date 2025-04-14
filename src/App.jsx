@@ -15,6 +15,7 @@ const App = () => {
       <HowToUse></HowToUse> 
       <Testimonial></Testimonial>
       <Footer></Footer>
+      
        {/* <Dashboard></Dashboard> */}
       {/* <Navbar></Navbar>
       <HeroSection></HeroSection>
