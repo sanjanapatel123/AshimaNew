@@ -36,6 +36,7 @@ export default {
         impact: ['Impact', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+         archivo: ['"Archivo Semi Expanded"', 'sans-serif'],
       },
     },
   },

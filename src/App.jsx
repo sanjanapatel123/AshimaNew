@@ -1,47 +1,18 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import HowToUse from "./components/HowToUse";
+import { Routes, Route } from "react-router-dom";
+import HomeSection from "./components/HomeSection";
 import Dashboard from "./components/Dashboard";
-import Testimonial from "./components/Tesimonial";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
+import HomePage from "./components/HomePage";
+import MaritalStatusPage from "./components/MaritalStatusPage";
 
 const App = () => {
   return (
-    <div>
-      <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <HowToUse></HowToUse> 
-      <Testimonial></Testimonial>
-      <Footer></Footer>
-      
-       {/* <Dashboard></Dashboard> */}
-      {/* <Navbar></Navbar>
-      <HeroSection></HeroSection>
-      <HowToUse></HowToUse> */}
-      {/* <Dashboard></Dashboard> */}
-      {/* <Home></Home> */}
-    </div>
+    <Routes>
+      <Route path="/" element={<HomeSection></HomeSection>}></Route>
+      <Route path="/dashboard" element={<Home></Home>}></Route>
+      <Route path="/about" element={<HomePage></HomePage>}></Route>
+      <Route path="/blog" element={<MaritalStatusPage></MaritalStatusPage>}></Route>
+    </Routes>
   );
 };
-
 export default App;
-
-// import React from "react";
-// import Sidebar from "./components/Sidebar";
-// import ChatBox from "./components/ChatBox";
-
-// const App = () => {
-//   return (
-//     <div
-//       className="flex min-h-screen"
-//       style={{ background: "linear-gradient(90deg, #0A071B 0%, #241B4A 100%)" }}
-//     >
-//       <Sidebar />
-//       <ChatBox />
-//     </div>
-//   );
-// };
-
-// export default App;
