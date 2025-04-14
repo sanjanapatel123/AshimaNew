@@ -2,6 +2,7 @@ import React from "react";
 import { FiLogOut, FiEdit3 } from "react-icons/fi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import ChatInput from "./ChatInput";
+import { Link } from "react-router-dom";
 
 const ChatBox = ({ isSidebarOpen, setIsSidebarOpen }) => {
   return (
@@ -18,7 +19,7 @@ const ChatBox = ({ isSidebarOpen, setIsSidebarOpen }) => {
           </button>
           <FiEdit3 /> */}
         </div>
-        <button className="bg-purple-600 px-3 py-1 rounded-full text-sm">Upgrade Plan</button>
+        <Link to={'/'} className="bg-purple-600 px-3 py-1 rounded-full text-sm">Upgrade Plan</Link>
       </div>
 
       {/* Welcome Text */}

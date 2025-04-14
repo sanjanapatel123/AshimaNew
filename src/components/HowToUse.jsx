@@ -1,47 +1,53 @@
 import React from "react";
+import herosection2 from "../assets/herosection8.png";
+import herosection3 from "../assets/herosection3.png";
+import herosection4 from "../assets/herosection4.png";
+import herosection5 from "../assets/herosection5.png";
+import herosection6 from "../assets/herosection6.png";
+import herosection7 from "../assets/herosection7.jpg";
 
 const HowToUse = () => {
   const data = [
-    {
-      img: "https://via.placeholder.com/300x400.png?text=Image+1",
-      title: "Video Title",
-    },
-    {
-      img: "https://via.placeholder.com/300x400.png?text=Image+2",
-      title: "Video Title",
-    },
-    {
-      img: "https://via.placeholder.com/300x400.png?text=Image+3",
-      title: "Video Title",
-    },
-    {
-      img: "https://via.placeholder.com/300x400.png?text=Image+4",
-      title: "Video Title",
-    },
+    { img: herosection3, title: "Video Title" },
+    { img: herosection4, title: "Video Title" },
+    { img: herosection5, title: "Video Title" },
+    { img: herosection6, title: "Video Title" },
   ];
 
   return (
-    <section className="py-20 bg-[#0A071B] text-white">
+    <section
+      className="py-8 bg-[#0A071B] text-white"
+      style={{
+        backgroundImage: `url(${herosection7})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-extrabold mb-14 relative inline-block">
-          HOW TO USE?
-          <span className="block h-[2px] w-16 bg-[#D4FF00] mx-auto mt-2"></span>
-        </h2>
+        <div className="text-center text-[#ffffff]">
+          <h2 className="text-[28px] md:text-[35px] lg:text-4xl font-bold text-[#ffffff] font-archivo mb-10 inline-block relative">
+            HOW TO USE?
+            <img
+              src={herosection2}
+              alt=""
+              className="text-[#DEFF16] absolute left-0 top-[35px] md:top-[45px] w-full h-auto"
+            />
+          </h2>
+        </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
           {data.map((item, index) => (
             <div
               key={index}
-              className="bg-[#181530] rounded-lg overflow-hidden"
+              className="bg-[#0A071B] rounded-lg overflow-hidden"
             >
               <img
                 src={item.img}
                 alt="Video"
-                className="w-full h-[350px] object-cover"
+                className="w-[220px] sm:w-[250px] md:w-[279px] h-[400px] sm:h-[480px] md:h-[548px] object-cover rounded-[8px]"
               />
-              <div className="py-3 text-center text-sm">{item.title}</div>
             </div>
           ))}
         </div>
