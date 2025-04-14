@@ -54,16 +54,19 @@ const Navbar = () => {
     <nav className="bg-[#0A071B] py-3 fixed w-full top-0 left-0 z-50 font-archivo">
       <div className=" mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-1 text-white font-[700] text-[30px]">
+        <Link
+          to={"/"}
+          className="flex items-center gap-1 text-white font-[700] text-[30px]"
+        >
           <span>CI</span>
           <span className="text-[#D4FF00]">GPT</span>
-        </div>
+        </Link>
 
         {/* Menu */}
         <div className="flex lg:gap-20 gap-10 text-sm font-poppins font-[500] text-[18px]">
-          <a href="#" className="text-[#D4FF00]">
+          <Link to={"/"} className=" text-[#D4FF00]">
             Home
-          </a>
+          </Link>
           <Link to={"/about"} className="text-white">
             About Us
           </Link>

@@ -82,9 +82,9 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, historyData }) => {
         <div className="space-y-6">
           {historyData.map((data, idx) => (
             <div key={idx}>
-              <h4 className="text-sm text-purple-400 mb-2">{data.title}</h4>
+              <h4 className="text-sm text-[#C497FF] font-poppins font-[400] text-[18px] mb-2">{data.title}</h4>
               {data.list.map((item, i) => (
-                <p key={i} className="text-[13px] text-gray-400 mb-1">
+                <p key={i} className="font-poppins text-[16px] font-[300] text-white mb-1">
                   {item}
                 </p>
               ))}

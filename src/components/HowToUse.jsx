@@ -31,7 +31,7 @@ const HowToUse = () => {
             <img
               src={herosection2}
               alt=""
-              className="text-[#DEFF16] absolute left-0 top-[35px] md:top-[45px] w-full h-auto"
+              className="text-[#DEFF16] absolute left-0 top-[35px] md:top-[45px] w-full h-auto "
             />
           </h2>
         </div>
@@ -46,7 +46,7 @@ const HowToUse = () => {
               <img
                 src={item.img}
                 alt="Video"
-                className="w-[220px] sm:w-[250px] md:w-[279px] h-[400px] sm:h-[480px] md:h-[548px] object-cover rounded-[8px]"
+                className="w-[220px] sm:w-[250px] md:w-[279px] h-[400px] sm:h-[480px] md:h-[548px] object-cover rounded-[8px] transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
