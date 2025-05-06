@@ -2,23 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply m-0 p-0 bg-[#0A071B] overflow-x-hidden;
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 5px; /* Reduced height */
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-a {
-  text-decoration: none !important;
-  /* color: black !important; */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc; /* Light color */
+  border-radius: 10px;
 }
 
-a:hover {
-  text-decoration: none !important;
-  /* color: black !important; */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* Slightly darker for hover effect */
 }

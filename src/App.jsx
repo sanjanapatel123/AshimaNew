@@ -1,18 +1,21 @@
-import { Routes, Route } from "react-router-dom";
-import HomeSection from "./components/HomeSection";
-import Dashboard from "./components/Dashboard";
-import Home from "./components/Home";
-import HomePage from "./components/HomePage";
-import MaritalStatusPage from "./components/MaritalStatusPage";
+
+
+
+
+
+import React from "react";
+import "animate.css";
+import ITIntro from "./Components/Who-We-Are/ITIntro"
+// import Home from "./Component/Home"; // Commented out if individual sections are used
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomeSection></HomeSection>}></Route>
-      <Route path="/dashboard" element={<Home></Home>}></Route>
-      <Route path="/about" element={<HomePage></HomePage>}></Route>
-      <Route path="/blog" element={<MaritalStatusPage></MaritalStatusPage>}></Route>
-    </Routes>
+    <div>
+    
+      <ITIntro/>
+   
+    </div>
   );
 };
+
 export default App;
