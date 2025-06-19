@@ -1,90 +1,64 @@
-// import React, { useState } from "react";
-// import LoginModal from "./LoginModal";
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   const [isLoginOpen, setLoginOpen] = useState(false);
-
-//   return (
-//     <nav className="bg-[#0A071B] py-5">
-//       <div className="container mx-auto px-4 flex justify-between items-center">
-//         {/* Logo */}
-//         <div className="flex items-center gap-1 text-white text-xl font-semibold">
-//           <span>CI</span>
-//           <span className="text-[#D4FF00]">GPT</span>
-//         </div>
-
-//         {/* Menu */}
-//         <div className="flex gap-10 text-sm font-medium">
-//           <a href="#" className="text-[#D4FF00]">
-//             Home
-//           </a>
-//           <Link to={"/about"} className="text-white">
-//             About Us
-//           </Link>
-//           <Link to={"/blog"} className="text-white">
-//             Blog
-//           </Link>
-//         </div>
-
-//         {/* Login Button */}
-//         <button
-//           onClick={() => setLoginOpen(true)}
-//           className="border border-[#D4FF00] text-white text-sm px-4 py-1 rounded-full hover:bg-[#D4FF00] hover:text-black transition"
-//         >
-//           Login Now
-//         </button>
-//       </div>
-
-//       <LoginModal isOpen={isLoginOpen} onClose={() => setLoginOpen(false)} />
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState } from "react";
-import LoginModal from "./LoginModal";
-import { Link } from "react-router-dom";
+import { HiMenuAlt4 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
+
+import logo from "../../images/logo.png";
+
+const NavbarItem = ({ title, classProps }) => {
+  return <li className={`mx-4 cursor-pointer ${classProps}`}>{title}</li>;
+};
 
 const Navbar = () => {
-  const [isLoginOpen, setLoginOpen] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="bg-[#0A071B] py-3 fixed w-full top-0 left-0 z-50 font-archivo">
-      <div className=" mx-auto px-4 flex justify-between items-center">
-        {/* Logo */}
-        <Link
-          to={"/"}
-          className="flex items-center gap-1 text-white font-[700] text-[30px]"
-        >
-          <span>CI</span>
-          <span className="text-[#D4FF00]">GPT</span>
-        </Link>
-
-        {/* Menu */}
-        <div className="flex lg:gap-20 gap-10 text-sm font-poppins font-[500] text-[18px]">
-          <Link to={"/"} className=" text-[#D4FF00]">
-            Home
-          </Link>
-          <Link to={"/about"} className="text-white">
-            About Us
-          </Link>
-          <Link to={"/blog"} className="text-white">
-            Blog
-          </Link>
-        </div>
-
-        {/* Login Button */}
-        <button
-          onClick={() => setLoginOpen(true)}
-          className="border border-[#D4FF00] text-white text-[15px] font-[400] px-4 py-1 rounded-full hover:bg-[#D4FF00] hover:text-black transition font-poppins"
-        >
-          Login Now
-        </button>
+    <nav className="w-full flex md:justify-center justify-between items-center p-4">
+      <div className="md:flex-[0.5] flex-initial justify-center items-center">
+        <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
-
-      <LoginModal isOpen={isLoginOpen} onClose={() => setLoginOpen(false)} />
+      <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
+          <NavbarItem key={item + index} title={item}></NavbarItem>
+        ))}
+        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+          Login
+        </li>
+      </ul>
+      <div className="flex relative">
+        {toggleMenu ? (
+          <AiOutlineClose
+            fontSize={28}
+            className="text-white md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(false)}
+          ></AiOutlineClose>
+        ) : (
+          <HiMenuAlt4
+            fontSize={28}
+            className="text-white md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(true)}
+          ></HiMenuAlt4>
+        )}
+        {toggleMenu && (
+          <ul className="z-10 fixed top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none flex flex-col justify-start items-end rounded-md
+          blue-glassmorphism text-white animate-slide-in 
+          ">
+            <li className="text-xl w-full my-2">
+              <AiOutlineClose
+                onClick={() => setToggleMenu(false)}
+              ></AiOutlineClose>
+            </li>
+            {["Market", "Exchange", "Tutorials", "Wallets"].map(
+              (item, index) => (
+                <NavbarItem
+                  key={item + index}
+                  title={item}
+                  classProps={"my-2 text-lg"}
+                ></NavbarItem>
+              )
+            )}
+          </ul>
+        )}
+      </div>
     </nav>
   );
 };

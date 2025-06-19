@@ -1,18 +1,26 @@
-import { Routes, Route } from "react-router-dom";
-import HomeSection from "./components/HomeSection";
-import Dashboard from "./components/Dashboard";
-import Home from "./components/Home";
-import HomePage from "./components/HomePage";
-import MaritalStatusPage from "./components/MaritalStatusPage";
+import React from "react";
+import {
+  Navbar,
+  Welcome,
+  Footer,
+  Services,
+  Transactions,
+  Loader,
+} from "./components";
+
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomeSection></HomeSection>}></Route>
-      <Route path="/dashboard" element={<Home></Home>}></Route>
-      <Route path="/about" element={<HomePage></HomePage>}></Route>
-      <Route path="/blog" element={<MaritalStatusPage></MaritalStatusPage>}></Route>
-    </Routes>
+    <div className="min-h-screen">
+      <div className="gradient-bg-welcome">
+        <Navbar></Navbar>
+        <Welcome></Welcome>
+      </div>
+      <Services></Services>
+      <Transactions></Transactions>
+      <Footer></Footer>
+    </div>
   );
 };
+
 export default App;
