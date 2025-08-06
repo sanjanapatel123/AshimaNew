@@ -1,26 +1,15 @@
-import React from "react";
-import {
-  Navbar,
-  Welcome,
-  Footer,
-  Services,
-  Transactions,
-  Loader,
-} from "./components";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+import { HelmetProvider } from "react-helmet-async";
+import ScrollToTop from "./Components/layout/ScrollToTop"; // import the new component
 
-
-const App = () => {
+export default function App() {
   return (
-    <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
-        <Navbar></Navbar>
-        <Welcome></Welcome>
-      </div>
-      <Services></Services>
-      <Transactions></Transactions>
-      <Footer></Footer>
-    </div>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop /> {/* 👈 add this right inside BrowserRouter */}
+        <AppRoutes />
+      </BrowserRouter>
+    </HelmetProvider>
   );
-};
-
-export default App;
+}

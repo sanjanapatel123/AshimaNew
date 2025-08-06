@@ -1,14 +1,15 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-// ✅ ADD THIS
-import "./index.css";
-import App from "./App.jsx";
-import { TransactionProvider } from "./context/TransactionContext.jsx";
+// src/main.jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import './App.css'
+import { HelmetProvider } from 'react-helmet-async'
 
-createRoot(document.getElementById("root")).render(
-  <TransactionProvider>
-    <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <HelmetProvider>
       <App />
-    </StrictMode>
-  </TransactionProvider>
-);
+    </HelmetProvider>
+  </React.StrictMode>
+)

@@ -5,28 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      display: ["Open Sans", "sans-serif"],
-      body: ["Open Sans", "sans-serif"],
-    },
     extend: {
-      screens: {
-        mf: "990px",
+      colors: {
+        primary: '#1a214c',    // Dark navy
+        pinkLight: '#f1bed8',  // Light pink
+        pink: '#e06ba6',       // Medium pink
+        rose: '#ec3557', 
+        darkpink:'#d2267c'      // Reddish rose
       },
-      keyframes: {
-        "slide-in": {
-          "0%": {
-            "-webkit-transform": "translateX(120%)",
-            transform: "translateX(120%)",
-          },
-          "100%": {
-            "-webkit-transform": "translateX(0%)",
-            transform: "translateX(0%)",
-          },
-        },
-      },
-      animation: {
-        "slide-in": "slide-in 0.5s ease-out",
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
       },
     },
   },
